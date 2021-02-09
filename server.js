@@ -47,7 +47,7 @@ app.get("/createdworkouts", (req, res) => {
 });
 
 // routes this are api routes
-
+// post routes
 app.post("/api/exercise", ({ body }, res) => {
   const workoutObj = {
     name: body.name,
@@ -86,11 +86,9 @@ app.post("/api/workouts", ({ body }, res) => {
       res.json(err);
     });
 });
-app.get("api/exercises", (req, res) => {});
-app.put("api/exercises", (req, res) => {});
-
-app.get("/createdworkouts", (req, res) => {
-  db.Exercise.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true })
+// update routes
+app.put("api/exercise", (req, res) => {
+  db.Workout.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true })
     .then((data) => {
       res.json(data);
     })
@@ -100,7 +98,28 @@ app.get("/createdworkouts", (req, res) => {
     });
 });
 
-app.delete("api/exercises", (req, res) => {});
+// delete routes
+app.delete("api/exercise", (req, res) => {
+  db.Exercise.deleteOne({ _id: body._id }),
+    (err) => {
+      if (err) {
+        throw err;
+      } else {
+        res.redirect("/"), console.log("deleted");
+      }
+    };
+});
+
+app.delete("api/workout", (req, res) => {
+  db.Exercise.deleteOne({ _id: body._id }),
+    (err) => {
+      if (err) {
+        throw err;
+      } else {
+        res.redirect("/"), console.log("deleted");
+      }
+    };
+});
 
 // Start the server
 app.listen(PORT, () => {
