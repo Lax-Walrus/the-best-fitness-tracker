@@ -37,10 +37,10 @@ $(".userExercise").on("click", (event) => {
   event.preventDefault();
   const newExerciseObj = {
     _id: $(this).attr("id"),
-    name: event.target[0].val().trim(),
-    rep: event.target[1].val().trim(),
-    unit: event.target[2].val().trim(),
-    notes: event.target[3].val().trim(),
+    name: event.target[0].value.trim(),
+    rep: event.target[1].value.trim(),
+    unit: event.target[2].value.trim(),
+    notes: event.target[3].value.trim(),
   };
   console.table(newExerciseObj);
 
