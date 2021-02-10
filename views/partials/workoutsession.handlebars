@@ -1,0 +1,26 @@
+{{#if exercise}}
+
+{{#each exercise}}
+<div class="container" id="{{_id}}">
+    <form class="update" id="{{_id}}">
+        <input type="text" class="name" value="{{name}}">
+        <p class="reps"> Do for <input type="number" value="{{reps}}"> <input type="text" name="unit" value="{{unit}}"
+                </p>
+
+            <textarea class="notes" value="{{notes}}">{{notes}}</textarea>
+
+        <div class="extraButtons">
+            <button type="submit"> update </button>
+            <button class="delete" id="{{_id}}"> Remove</button>
+        </div>
+    </form>
+</div>
+
+{{/each}}
+{{else}}
+
+<div class="empty">
+    <p> pun about being empty... YEET! </p>
+</div>
+
+{{/if}}

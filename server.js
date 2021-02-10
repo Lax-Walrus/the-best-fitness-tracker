@@ -2,12 +2,15 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+var exphbs = require("express-handlebars");
 
 const PORT = process.env.PORT || 3005;
 
 const db = require("./models");
 
 const app = express();
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 app.use(logger("dev"));
 
@@ -29,7 +32,7 @@ app.get("/", (req, res) => {
     .lean()
 
     .then((workout) => {
-      res.render("index", { workouts: workout });
+      res.render("index", { workout: workout });
     });
 });
 

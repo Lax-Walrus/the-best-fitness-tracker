@@ -1,0 +1,37 @@
+<div class="container">
+
+    {{#if workout}}
+    {{#each workout}}
+
+    <div class="workoutContainer" id="{{_id}}">
+        <div class="title" id="{{_id}}">{{name}}<button class="removeWorkout">Remove</button></div>
+    </div>
+
+    <div class="userExercise">
+        <form class="userInput" id="{{_id}}">
+            <div class="formGroup"> <label for="name">New Exercise</label>
+                <input type="text" name="name" placeholder="Curls, push-ups, etc">
+            </div>
+
+            <div class="formGroup">
+                <label for="userReps"> How many reps/miles are needed? </label>
+                <input type="number" name="reps" placeholder="12">
+                <input type="text" name="reps" placeholder="curls,sets,miles">
+            </div>
+
+            <div class="formGroup">
+                <label for="userNotes">Notes:</label>
+                <input type="text" name="notes" placeholder="additional info">
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+    {{workoutsession}}
+
+</div>
+{{/each}}
+{{else}}
+<div class="empty">
+    <h1>This bitch empty... YEET! </h1>
+</div>
+{{/if}}
