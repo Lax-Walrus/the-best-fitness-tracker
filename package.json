@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "handlebars": "^4.7.6",
+    "materialize": "^1.0.0",
     "mongo": "^0.1.0",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.15",

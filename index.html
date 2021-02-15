@@ -6,31 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Best Fitness Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-    <div>
-        <form class="newWorkout">
-            <input type="text" class="workoutName">
-        </form>
+
+
+    <div class="container">
+        <div class="row">
+            <form class="col s12" id="addWorkout">
+                <div class="row">
+                    <div class="col 3">
+                        <p>Name of your workout</p>
+                        <input type="text" class="name">
+                    </div>
+                    <div class="col 3">
+                        <p>How many reps you doing?</p>
+                        <input type="number" class="reps">
+                    </div>
+                    <div class="col 3">
+                        <p>what are you doing?</p>
+                        <input type="text" class="unit">
+                    </div>
+                    <div class="col 3">
+                        <p>Did I miss anything?</p>
+                        <input type="text" class="notes">
+
+                    </div>
+                    <div class="col 2"> <a class="btn-floating btn-large waves-effect waves-light red"><i
+                                class="material-icons" id="addWorkoutBTN">add</i></a>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </form>
+        </div>
+
     </div>
 
 
-    <div>
-        <form class="addExercise">
-            <input type="text" class="name">
-            <input type="number" class="reps">
-            <input type="text" class="unit">
-            <input type="text" class="notes">
-        </form>
-    </div>
 
 
 
 
 
 
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="/assets/js/index.js"></script>

@@ -1,8 +1,14 @@
+console.log("see this".green);
 $(function () {
-  $(".newWorkout").on("submit", (event) => {
+  $("#addWorkoutBTN").on("submit", (event) => {
     event.preventDefault();
-
-    const userWorkOut = $("#reg-name-input").val().trim();
+    const workoutObj = {
+      _id: $(this).attr("id"),
+      name: event.target[0].value.trim(),
+      rep: event.target[1].value.trim(),
+      unit: event.target[2].value.trim(),
+      notes: event.target[3].value.trim(),
+    };
 
     $.ajax({
       url: "/api/workouts",
